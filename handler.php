@@ -16,10 +16,6 @@ require_once realpath(dirname(__FILE__) . '/vendor/autoload.php');
 $_SERVER['SCRIPT_FILENAME'] = realpath(__FILE__);
 
 try {
-    if (strtolower($_SERVER['REQUEST_METHOD']) !== 'post') {
-        die('Access denied!');
-    }
-
     $config = include_once realpath(dirname(__FILE__) . '/configs/config.php');
 
     $application = new Application($config);
